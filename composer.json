@@ -1,0 +1,21 @@
+{
+    "name": "kdc/frise-chronologique",
+    "description": "Frise chrnologique",
+    "authors": [
+        {
+            "name": "vvaufrey",
+            "email": "vvaufrey@kaliop.com"
+        }
+    ],
+    "require": {
+        "ext-pdo": "*",
+        "ext-json": "*",
+        "vlucas/phpdotenv": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core",
+            "App\\": "App"
+        }
+    }
+}

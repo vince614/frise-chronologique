@@ -1,0 +1,30 @@
+<IfModule mod_rewrite.c>
+
+    DirectoryIndex Public/index.php
+
+############################################
+## enable rewrites
+
+    RewriteEngine On
+    Options +FollowSymLinks
+	Options -Indexes
+
+############################################
+## TRACE and TRACK HTTP methods disabled to prevent XSS attacks
+
+    RewriteCond %{REQUEST_METHOD} ^TRAC[EK]
+    RewriteRule .* - [L,R=405]
+
+############################################
+## never rewrite for existing files, directories and links
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-l
+
+############################################
+## MVC
+
+    RewriteRule ^(.*)$ Public/index.php?url=$1 [L,NC,QSA]
+
+</IfModule>

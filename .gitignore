@@ -1,2 +1,8 @@
 # Ignore PhpStorm files
 .idea
+
+# Env configuration
+.env
+
+# Ignore vendor file
+vendor
