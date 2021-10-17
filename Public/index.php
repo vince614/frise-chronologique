@@ -38,16 +38,10 @@ $router = new Router($request->getUrl());
 $router->get('/');
 
 /**
- * Blog list route
+ * Unique route
  * @GET METHOD
  */
-$router->get('/blog');
-
-/**
- * Unique blog route
- * @GET METHOD
- */
-$router->get('/blog/:id', ACL::EVERYONE);
+$router->get('/:id', ACL::EVERYONE);
 
 /**
  * Unique blog route
