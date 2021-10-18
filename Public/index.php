@@ -14,9 +14,9 @@ define('ROOT', __DIR__ .  '/..');
 session_start();
 
 // Require autoload
-require '../vendor/autoload.php';
-require '../app/App.php';
-require '../Core/Exception/Exception.php';
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../app/App.php';
+require __DIR__ . '/../Core/Exception/Exception.php';
 
 // Init app
 App::init();
