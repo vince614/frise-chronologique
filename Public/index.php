@@ -15,7 +15,7 @@ session_start();
 
 // Require autoload
 require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/../app/App.php';
+require __DIR__ . '/../App/App.php';
 require __DIR__ . '/../Core/Exception/Exception.php';
 
 // Init app
